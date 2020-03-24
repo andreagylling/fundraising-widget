@@ -1,0 +1,24 @@
+/* Global resets */
+body {font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif; color: #424242; line-height: 1.4; font-size: 12px;}
+
+/* Fonts */
+h1 {
+  font-family: "rooney-web", 'AmericanTypewriter', Rockwell, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* COLORS: */
+:root{
+  --blue: #20A1D4;
+  --green: #1CBC2C;
+  --light-green: #dff0d8;
+  --orange: #EF5F3C;
+  --red: #FF4500;
+  --light-red: #FCE0E0;
+  --black: #424242;
+  --grey: #777;
+  --light-grey: #eaeaea;
+  --white: #FFF;
+  --true-black: #000;
+}

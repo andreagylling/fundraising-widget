@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Fundraising widget (frontend exercise)
+**Problem description**
+Shady Fundraising Inc. wants a new fundraising widget for their website. The widget should have clear communication about the fundraising progress and allow the users to enter the amount they wish to pledge.
 
-## Available Scripts
+Their web designer has created most of the HTML and CSS that is needed for the fundraising widget, but you need to write the JavaScript so it actually is dynamic and modify the HTML and CSS to make it work as expected.
 
-In the project directory, you can run:
+**Problem requirements**
+ - The progress bar must update to reflect to the progress of the fundraising, the progress is currently static at 75%. If the fundraising has reached it's goal the progressbar must become green (#1CBC2C), otherwise it should be orange (#EF5F3C).
 
-### `npm start`
+ - The web designer forgot to implement the styles for the progress bar colors, so you need to do this in addition to make the progress bar update based on the progress.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - The thank you notice must be hidden from the start and only shown if a successful pledge has been submitted.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ - Initial state of the "Thank you notice" is hidden.
 
-### `npm test`
+ - When a successful pledge has been made the "Thank you notice" must be shown and the "Pledge input controls" must be hidden.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - When the "Thank you notice" is dismissed the "Pledge input controls" must be shown.
 
-### `npm run build`
+ - The pledge amount must only accept integer values and the value must be cleared on successful pledge.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - If an invalid value is entered in the pledge input an error message to the user must be shown, the web designer forgot to think of error handling so you need to implement the design for the it.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ - A successful pledge must update the progress bar, how many percent of the goal that has been funded and how many dollars that has been raised in total.
