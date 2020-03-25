@@ -1,10 +1,12 @@
 ### Fundraising widget (frontend exercise)
 
-**To run:**
 - fundraising-widget/server - node server.js
 - fundraising-widget/client - npm start
 
+----
+
 **Problem description**
+
 Shady Fundraising Inc. wants a new fundraising widget for their website. The widget should have clear communication about the fundraising progress and allow the users to enter the amount they wish to pledge.
 
 Their web designer has created most of the HTML and CSS that is needed for the fundraising widget, but you need to write the JavaScript so it actually is dynamic and modify the HTML and CSS to make it work as expected.
