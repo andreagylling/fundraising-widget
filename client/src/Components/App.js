@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import { Container, ToolTip, BoxFrame, BoxFrameContent, ProgressBarContainer, TextInput, Submit } from '../Styles/styles'
 import '../Styles/index.css';
@@ -30,12 +30,29 @@ const Notification = styled.div`
 
 export default () =>  { 
   const [amount, setAmount] = useState(null);
+  const [amountFunded, setAmountFunded] = useState(null);
+  const [percentageOfGoal, setPercentageOfGoal] = useState(null);
   const [pledgeSent, setPledgeSent] = useState(false);
   const [error, setError] = useState(false);
 
   const targetFunds = 1000;
-  let amountFunded = localStorage.getItem('amountFunded')
-  let percentageOfGoal = localStorage.getItem('percentageOfGoal')
+  
+  const getTotalFunds = async () => {
+    await fetch('http://localhost:5000/totalFunds')
+    .then(res => res.json())
+    .then(res => {
+      const {totalFunds} = res
+      setAmountFunded(totalFunds);
+      setPercentageOfGoal(Math.floor((totalFunds / targetFunds) * 100))
+    })
+    .catch(err => {
+      setError('Something went wrong, please try again!')
+    })
+  }
+
+  useEffect(() => {
+    getTotalFunds();
+  }, [])
 
   const savePledge = (e) => {
     e.preventDefault();
@@ -46,10 +63,15 @@ export default () =>  {
       setError(true);
       return;
     }
-    amountFunded = Number(amountFunded) + Number(amount)
-    localStorage.setItem('amountFunded', amountFunded)
-    percentageOfGoal = Math.floor((amountFunded / targetFunds) * 100)
-    localStorage.setItem('percentageOfGoal', percentageOfGoal)
+
+    const newTotal = Number(amountFunded) + Number(amount)
+
+    fetch('http://localhost:5000/totalFunds/pledge', {
+      method: 'POST',
+      body: JSON.stringify({newTotal})
+    }).catch(() => setError('Something went wrong, please try again!'))
+    
+    getTotalFunds();
   }
 
   const handleClose = () => {

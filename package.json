@@ -1,35 +1,27 @@
 {
   "name": "fundraising-widget",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "**Problem description** Shady Fundraising Inc. wants a new fundraising widget for their website. The widget should have clear communication about the fundraising progress and allow the users to enter the amount they wish to pledge.",
+  "main": "index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.1",
     "styled-components": "^5.0.1"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreagylling/fundraising-widget.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreagylling/fundraising-widget/issues"
+  },
+  "homepage": "https://github.com/andreagylling/fundraising-widget#readme"
 }
