@@ -23,4 +23,4 @@ Their web designer has created most of the HTML and CSS that is needed for the f
 
  - A successful pledge must update the progress bar, how many percent of the goal that has been funded and how many dollars that has been raised in total.
  
-** fundraising-widget/server - node server.js || fundraising-widget/client - npm start **
+**fundraising-widget/server - node server.js || fundraising-widget/client - npm start**
