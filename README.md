@@ -22,3 +22,5 @@ Their web designer has created most of the HTML and CSS that is needed for the f
  - If an invalid value is entered in the pledge input an error message to the user must be shown, the web designer forgot to think of error handling so you need to implement the design for the it.
 
  - A successful pledge must update the progress bar, how many percent of the goal that has been funded and how many dollars that has been raised in total.
+ 
+** fundraising-widget/server - node server.js || fundraising-widget/client - npm start **
